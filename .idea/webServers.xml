@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="260502cf-93d7-4f33-93ee-bacfa77b8e2a" name="colo1" url="http://testform.edisonave.com/">
+        <fileTransfer rootFolder="/var/www/testform.edisonave.com/wp-content/plugins/eac-wp-qrcode-generator" accessType="SFTP" host="colo1.edisonave.net" port="22" sshConfigId="b97cbdd2-df60-4615-a268-38bfe74d4e62" sshConfig="tprinty@colo1.edisonave.net:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

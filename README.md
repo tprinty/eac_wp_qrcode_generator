@@ -7,7 +7,7 @@
 This is the public repository for the Edison Avenue Consulting LLC plugin that can be used to
 generate QR codes for Wordpress. 
 
-The plugin can be called via a URL argment or Via shortcode. There is a special method
+The plugin can be called via a URL argument or Via shortcode. There is a special method
 for generating VCard formatted data
 
 **Examples:**
@@ -40,7 +40,8 @@ This will give you a QR Code that has VCard (contact information) QR code: <br /
 **Intallation:**
 
 1. Download the plugin or install the plugin from the WordPress.org plugins directory
-2. Add the shortcodes to the posts where you would like the QR Code to appear.
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Add the shortcodes to the posts where you would like the QR Code to appear.
 
 That is all there is to it.
 

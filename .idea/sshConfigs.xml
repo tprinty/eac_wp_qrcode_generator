@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="colo1.edisonave.net" id="b97cbdd2-df60-4615-a268-38bfe74d4e62" port="22" nameFormat="DESCRIPTIVE" username="tprinty" />
+    </configs>
+  </component>
+</project>
