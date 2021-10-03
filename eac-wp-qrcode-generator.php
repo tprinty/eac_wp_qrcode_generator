@@ -211,15 +211,10 @@ function eac_varcard_qrcode_generate($atts) {
     if (strlen($address_string)>3){
         $data .= "ADR:" . $address_string."\r\n";
     }
-
-
+    //Finish up the vcard
     $data .= "REV:" . date('Ymd') . "T195243Z\r\n";
     $data .="END:VCARD";
-
-
     return gen_qr_code($options, $format, $data);
-
-
 }
 
 
