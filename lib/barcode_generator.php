@@ -22,26 +22,42 @@ DEALINGS IN THE SOFTWARE.
 
 class barcode_generator {
 
-    public function output_image($format, $symbology, $data, $options) {
+    public function output_image($format, $symbology, $data, $options, $filename, $render) {
         switch (strtolower(preg_replace('/[^A-Za-z0-9]/', '', $format))) {
             case 'png':
-                header('Content-Type: image/png');
-                $image = $this->render_image($symbology, $data, $options);
-                imagepng($image);
-                imagedestroy($image);
+                if ($render){
+                    header('Content-Type: image/png');
+                    $image = $this->render_image($symbology, $data, $options);
+                    imagepng($image);
+                    imagedestroy($image);
+                }else{
+                    $image = $this->render_image($symbology, $data, $options);
+                    imagepng($image, $filename);
+                }
                 break;
             case 'gif':
-                header('Content-Type: image/gif');
-                $image = $this->render_image($symbology, $data, $options);
-                imagegif($image);
-                imagedestroy($image);
+                if ($render){
+                    header('Content-Type: image/gif');
+                    $image = $this->render_image($symbology, $data, $options);
+                    imagegif($image);
+                    imagedestroy($image);
+                }else{
+                    $image = $this->render_image($symbology, $data, $options);
+                    imagegif($image);
+                }
+
                 break;
             case 'jpg': case 'jpe': case 'jpeg':
-            header('Content-Type: image/jpeg');
-            $image = $this->render_image($symbology, $data, $options);
-            imagejpeg($image);
-            imagedestroy($image);
-            break;
+                if ($render){
+                    header('Content-Type: image/jpeg');
+                    $image = $this->render_image($symbology, $data, $options);
+                    imagejpeg($image);
+                    imagedestroy($image);
+                }else{
+                    $image = $this->render_image($symbology, $data, $options);
+                    imagejpeg($image, $filename);
+                }
+                break;
             case 'svg':
                 header('Content-Type: image/svg+xml');
                 echo $this->render_svg($symbology, $data, $options);
