@@ -33,6 +33,7 @@ This will give you a colorized QR Code like the following: <br />
 *Generate  VCard QR Code* <br />
 `[eac_varcard_qrcode_generate first_name="Tom" last_name="Printy" title="CEO" org="Edison Avenue Consulting LLC" email="info@edisonave.com" tel="+18472356267" url="https://www.edisonave.com"]
 `
+
 This will give you a QR Code that has VCard (contact information) QR code: <br />
 ![Tom Printy VCard QR Code](images/tomvcard.png)
 
